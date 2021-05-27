@@ -1,0 +1,28 @@
+repos:
+    - repo: https://github.com/pre-commit/pre-commit-hooks
+      rev: v2.3.0
+      hooks:
+      - id: check-yaml
+        args: [--unsafe]
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      # - id: check-json
+      - id: check-added-large-files
+      - id: check-ast
+    # - repo: https://github.com/psf/black
+    #   rev: stable
+    #   hooks:
+    #   - id: black
+    - repo: https://github.com/pre-commit/pygrep-hooks
+      rev: v1.4.2
+      hooks:
+      - id: python-check-blanket-noqa
+      - id: python-use-type-annotations
+    - repo: https://github.com/asottile/seed-isort-config
+      rev: v2.2.0
+      hooks:
+      - id: seed-isort-config
+    # - repo: https://github.com/pre-commit/mirrors-isort
+    #   rev: v5.4.2
+    #   hooks:
+    #     - id: isort
